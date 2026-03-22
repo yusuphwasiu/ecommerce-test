@@ -1,0 +1,26 @@
+{
+  "name": "checkout-redesign-v2",
+  "version": "1.0.0",
+  "description": "Checkout Redesign v2.0 - Monorepo for ecommerce checkout system",
+  "private": true,
+  "workspaces": [
+    "packages/frontend",
+    "packages/backend",
+    "packages/e2e"
+  ],
+  "scripts": {
+    "install:all": "yarn install",
+    "dev": "yarn workspaces run dev",
+    "build": "yarn workspaces run build",
+    "test": "yarn workspaces run test",
+    "test:e2e": "yarn workspace @checkout/e2e test",
+    "lint": "yarn workspaces run lint",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,js,jsx,json,md}\""
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  }
+}
